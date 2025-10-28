@@ -25,4 +25,3 @@ COPY vpn-agent .
 RUN chmod +x ./vpn-agent
 
 ENTRYPOINT ["./vpn-agent"]
-
