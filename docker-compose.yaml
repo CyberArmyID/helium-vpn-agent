@@ -12,4 +12,4 @@ services:
       - SYS_MODULE
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /opt/helium-agent:/opt/helium-agent/
+      - ${BASE_DIR}:/opt/helium-agent/
