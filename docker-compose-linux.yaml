@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  vpn-agent:
+    image: helium-vpn-agent:latest
+    container_name: vpn-agent
+    command: ["${UUID}"]
+    network_mode: host
+    restart: always
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/${USER}/.helium-agent:/opt/helium-agent
