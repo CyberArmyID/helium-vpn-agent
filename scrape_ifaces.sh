@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-OUTPUT_DIR="data"
+OUTPUT_DIR=".helium-agent/data"
 OUTPUT_FILE="$OUTPUT_DIR/host_interfaces.json"
 mkdir -p "$OUTPUT_DIR"
 

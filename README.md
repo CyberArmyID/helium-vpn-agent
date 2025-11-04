@@ -2,16 +2,15 @@
 
 ### Linux
 ```
-git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && UUID={xxxx-xxx-xx-xxxx} docker compose up -d --build
+git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && bash ./scrape_ifaces.sh && UUID={xxxx-xxx-xx-xxxx} docker compose up -d --build
 ```
 
-### Windows (CMD)
+### Windows (PowerShell)
 ```
-git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && set UUID={xxxx-xxx-xx-xxxx} && docker compose up -d --build
-
+git clone https://github.com/CyberArmyID/helium-vpn-agent.git; cd helium-vpn-agent; powershell -ExecutionPolicy Bypass -File .\scrape_ifaces.ps1; $env:UUID="{xxxx-xxx-xx-xxxx}"; docker compose up -d --build
 ```
 
 ### macOS
 ```
-git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && UUID={xxxx-xxx-xx-xxxx} docker compose up -d --build
+git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && bash ./scrape_ifaces.sh && UUID={xxxx-xxx-xx-xxxx} docker compose up -d --build
 ```

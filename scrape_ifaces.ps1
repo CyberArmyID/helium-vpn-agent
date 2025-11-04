@@ -1,4 +1,4 @@
-$OutputDir = "data"
+$OutputDir = ".helium-agent/data"
 $OutputFile = Join-Path $OutputDir "host_interfaces.json"
 
 if (!(Test-Path $OutputDir)) {
