@@ -1,6 +1,6 @@
-FROM debian:bookworm-slim
+FROM alpine:3.22
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apk add --no-cache \
     bash \
     iproute2 \
     iptables \
@@ -9,14 +9,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     jq \
     sudo \
     ca-certificates \
-    libstdc++6 \
-    libffi8 \
+    libstdc++ \
+    libffi \
     openssl \
     procps \
     openresolv \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN curl https://get.docker.com | sudo sh
+    docker-cli
 
 WORKDIR /app
 
