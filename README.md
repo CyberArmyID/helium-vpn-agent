@@ -2,7 +2,7 @@
 
 ### Linux
 ```
-git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && bash ./scrape_ifaces.sh && UUID={xxxx-xxx-xx-xxxx} docker compose up -d --build
+git clone https://github.com/CyberArmyID/helium-vpn-agent.git && cd helium-vpn-agent && bash ./scrape_ifaces.sh && UUID={xxxx-xxx-xx-xxxx} docker compose -f docker-compose-host.yaml up -d --build
 ```
 
 ### Windows (PowerShell)
