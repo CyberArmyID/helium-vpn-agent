@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: helium-vpn-agent
-    command: ["${UUID}", "LICENSE"]
+    command: ["${UUID}", "${LICENSE}"]
     network_mode: bridge
     restart: always
     cap_add:
